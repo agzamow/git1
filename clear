@@ -1,0 +1,72 @@
+[33mcommit 772dc1dc3464ddc2ea45aff58060440ddf0a83b9[m
+Author: agzamow <tf.wolarek@gmail.com>
+Date:   Sat Jan 11 13:02:57 2020 +0100
+
+    new elements with numbers added
+
+[1mdiff --git a/index.html b/index.html[m
+[1mindex 8fe88f7..716b73f 100644[m
+[1m--- a/index.html[m
+[1m+++ b/index.html[m
+[36m@@ -9,5 +9,14 @@[m
+ </head>[m
+ <body>[m
+     <p>cwiczenia z git</p>[m
+[32m+[m[32m    <div class="card">[m
+[32m+[m[32m        <span class="card_number"></span>[m
+[32m+[m[32m    </div>[m
+[32m+[m[32m    <div class="card">[m
+[32m+[m[32m        <span class="card_number"></span>[m
+[32m+[m[32m    </div>[m
+[32m+[m[32m    <div class="card">[m
+[32m+[m[32m        <span class="card_number"></span>[m
+[32m+[m[32m    </div>[m
+ </body>[m
+ </html>[m
+\ No newline at end of file[m
+[1mdiff --git a/style.css b/style.css[m
+[1mindex d8173cc..776734e 100644[m
+[1m--- a/style.css[m
+[1m+++ b/style.css[m
+[36m@@ -1,4 +1,38 @@[m
+[31m-p {[m
+[31m-    background-color: black;[m
+[32m+[m[32m* {[m
+[32m+[m[32m    box-sizing: border-box;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mbody {[m
+[32m+[m[32m    background: black;[m
+     color: white;[m
+[32m+[m[32m    width: 100vh;[m
+[32m+[m[32m    height: 100vh;[m
+[32m+[m[32m    padding: 0;[m
+[32m+[m[32m    margin: 0;[m
+[32m+[m[32m    counter-reset: card;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.card {[m
+[32m+[m[32m    counter-increment: card_number[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.card_number::before {[m
+[32m+[m[32m    font-weight: bold;[m
+[32m+[m[32m    font-size: 38px;[m
+[32m+[m[32m    content: counter(card_number);[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.card{[m
+[32m+[m[32m    width: 100px;[m
+[32m+[m[32m    height: 150px;[m
+[32m+[m[32m    background: red;[m
+[32m+[m[32m    padding: 10px;[m
+[32m+[m[32m    margin: 5px;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.card:nth-child(2){[m
+[32m+[m[32m    background: yellow;[m
+[32m+[m[32m}[m
+[32m+[m[32m.card:nth-child(3){[m
+[32m+[m[32m    background: green;[m
+ }[m
+\ No newline at end of file[m
